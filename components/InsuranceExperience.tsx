@@ -61,7 +61,7 @@ const products: Product[] = [
     eyebrow: "Gesundheit",
     title: "Krankenversicherung",
     description: "Gesundheit verständlich einordnen – passend zu deinem Leben und deinen Prioritäten.",
-    image: "/assets/health.svg",
+    image: "https://images.unsplash.com/photo-1756244834590-b1a32e94df40?auto=format&fit=crop&fm=jpg&q=82&w=1800",
     icon: <HeartPulse size={22} strokeWidth={1.7} />,
   },
   {
@@ -69,7 +69,7 @@ const products: Product[] = [
     eyebrow: "Vorsorge",
     title: "bAV & Zukunft",
     description: "Heute Struktur schaffen, damit Vorsorge morgen nicht kompliziert werden muss.",
-    image: "/assets/bav.svg",
+    image: "https://images.unsplash.com/photo-1764694875484-22d6a33ee374?auto=format&fit=crop&fm=jpg&q=82&w=1800",
     icon: <BarChart3 size={22} strokeWidth={1.7} />,
   },
   {
@@ -77,7 +77,7 @@ const products: Product[] = [
     eyebrow: "Absicherung",
     title: "Versicherungen",
     description: "Schützen, was wirklich wichtig ist – ohne Produktdschungel und ohne unnötige Komplexität.",
-    image: "/assets/family.svg",
+    image: "https://images.unsplash.com/photo-1763357617066-8cf613ac6d32?auto=format&fit=crop&fm=jpg&q=82&w=1800",
     icon: <ShieldCheck size={22} strokeWidth={1.7} />,
   },
   {
@@ -85,7 +85,7 @@ const products: Product[] = [
     eyebrow: "Nachlass",
     title: "Erbschaft",
     description: "Werte bewahren, Übergänge frühzeitig sortieren und die nächsten Schritte sichtbar machen.",
-    image: "/assets/inheritance.svg",
+    image: "https://images.unsplash.com/photo-1773505121839-0d12dd196324?auto=format&fit=crop&fm=jpg&q=82&w=1800",
     icon: <Trees size={22} strokeWidth={1.7} />,
   },
 ];
@@ -126,11 +126,11 @@ const navigator = [
 ];
 
 const roleOptions: Array<{ key: RoleKey; title: string; text: string; image?: string; icon: ReactNode }> = [
-  { key: "angestellt", title: "Angestellt", text: "Ich möchte mich und meine Familie gut aufstellen.", image: "/assets/employed.svg", icon: <UserRound /> },
-  { key: "selbststaendig", title: "Selbstständig", text: "Ich möchte Business und Privatleben strukturiert absichern.", image: "/assets/self-employed.svg", icon: <BriefcaseBusiness /> },
-  { key: "arbeitgeber", title: "Arbeitgeber", text: "Ich möchte Mitarbeitende und Benefits mitdenken.", image: "/assets/employer.svg", icon: <Building2 /> },
-  { key: "familie", title: "Familie", text: "Ich möchte unsere gemeinsame Zukunft sortieren.", image: "/assets/family-funnel.svg", icon: <House /> },
-  { key: "berufseinsteiger", title: "Berufseinsteiger", text: "Ich möchte von Anfang an sinnvoll vorsorgen.", image: "/assets/career-starter.svg", icon: <GraduationCap /> },
+  { key: "angestellt", title: "Angestellt", text: "Ich möchte mich und meine Familie gut aufstellen.", image: "https://images.unsplash.com/photo-1756244834590-b1a32e94df40?auto=format&fit=crop&fm=jpg&q=82&w=1800", icon: <UserRound /> },
+  { key: "selbststaendig", title: "Selbstständig", text: "Ich möchte Business und Privatleben strukturiert absichern.", image: "https://images.unsplash.com/photo-1652608243111-98fa0e50d2e7?auto=format&fit=crop&fm=jpg&q=82&w=1800", icon: <BriefcaseBusiness /> },
+  { key: "arbeitgeber", title: "Arbeitgeber", text: "Ich möchte Mitarbeitende und Benefits mitdenken.", image: "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&fm=jpg&q=82&w=1800", icon: <Building2 /> },
+  { key: "familie", title: "Familie", text: "Ich möchte unsere gemeinsame Zukunft sortieren.", image: "https://images.unsplash.com/photo-1763357617066-8cf613ac6d32?auto=format&fit=crop&fm=jpg&q=82&w=1800", icon: <House /> },
+  { key: "berufseinsteiger", title: "Berufseinsteiger", text: "Ich möchte von Anfang an sinnvoll vorsorgen.", image: "https://images.unsplash.com/photo-1757137910189-b308b4c47c52?auto=format&fit=crop&fm=jpg&q=82&w=1800", icon: <GraduationCap /> },
   { key: "sonstiges", title: "Sonstiges", text: "Ich bin noch unsicher und möchte Orientierung.", icon: <CircleEllipsis /> },
 ];
 
@@ -469,7 +469,7 @@ function FunnelOverlay({ open, initialTopic, onClose }: { open: boolean; initial
                   </div>
                 </div>
                 <aside className="funnel-aside">
-                  <div className="aside-image"><Image src="/assets/hero-life.svg" alt="Blick über eine Berg- und Seenlandschaft" fill sizes="32vw" unoptimized /><div className="aside-wash" /><span className="hand-note">Ein Leben.<br />Viele Möglichkeiten.<i /></span></div>
+                  <div className="aside-image"><Image src="https://images.unsplash.com/photo-1756764677515-c628b157561f?auto=format&fit=crop&fm=jpg&q=82&w=2400" alt="Blick über eine Berg- und Seenlandschaft" fill sizes="32vw" unoptimized /><div className="aside-wash" /><span className="hand-note">Ein Leben.<br />Viele Möglichkeiten.<i /></span></div>
                   <div className="aside-card progress-card"><div><strong>Dein Fortschritt</strong><small>{step + 1} von 5 Schritten</small></div><span className="mini-progress"><i style={{ width: `${((step + 1) / 5) * 100}%` }} /></span><b>{(step + 1) * 20}%</b></div>
                   <div className="aside-card summary-card"><span><Leaf /></span><div><small>Dein Fokus</small><strong>{topicLabel}</strong>{role && <em>{roleOptions.find((item) => item.key === role)?.title}</em>}</div></div>
                   <div className="aside-reasons"><strong>Warum dieser Ablauf?</strong><p><LockKeyhole /> Datenschutz im Fokus</p><p><Compass /> Erst Orientierung, dann Details</p><p><HeartHandshake /> Persönliche Beratung bleibt persönlich</p></div>
@@ -512,7 +512,7 @@ export default function InsuranceExperience() {
       </header>
 
       <section className="hero" id="top" ref={heroRef}>
-        <motion.div className="hero-bg" style={{ y: heroY, scale: heroScale }}><Image src="/assets/hero-life.svg" alt="Paar mit Blick über eine Berg- und Seenlandschaft" fill priority sizes="100vw" unoptimized /></motion.div>
+        <motion.div className="hero-bg" style={{ y: heroY, scale: heroScale }}><Image src="https://images.unsplash.com/photo-1756764677515-c628b157561f?auto=format&fit=crop&fm=jpg&q=82&w=2400" alt="Paar mit Blick über eine Berg- und Seenlandschaft" fill priority sizes="100vw" unoptimized /></motion.div>
         <div className="hero-wash" />
         <motion.div className="hero-content" style={{ opacity: heroOpacity }}>
           <div className="hero-copy">
@@ -541,7 +541,7 @@ export default function InsuranceExperience() {
       </section>
 
       <section className="navigator-section" id="navigator">
-        <div className="navigator-bg"><Image src="/assets/hero-life.svg" alt="" fill sizes="100vw" unoptimized /></div><div className="navigator-wash" />
+        <div className="navigator-bg"><Image src="https://images.unsplash.com/photo-1756764677515-c628b157561f?auto=format&fit=crop&fm=jpg&q=82&w=2400" alt="" fill sizes="100vw" unoptimized /></div><div className="navigator-wash" />
         <div className="navigator-inner section">
           <Reveal className="navigator-intro"><span className="eyebrow">Dein Lebens-Navigator</span><h2>Was möchtest du heute<br />für morgen klären?</h2><p>Du musst kein Versicherungswissen mitbringen. Wähle einfach, was dich gerade beschäftigt.</p><div className="navigator-benefits"><span><Leaf /> Individuelle Route</span><span><Clock3 /> In wenigen Minuten</span><span><Compass /> Verständlich geführt</span></div><span className="hand-note navigator-note">Klarheit heute.<br />Ein stärkeres Morgen.<i /></span></Reveal>
           <div className="navigator-workspace">
@@ -560,13 +560,13 @@ export default function InsuranceExperience() {
 
       <section className="explainer-section section">
         <Reveal className="explainer-card">
-          <div className="explainer-photo"><Image src="/assets/bav.svg" alt="Moderne Architektur in einer Berglandschaft" fill sizes="50vw" unoptimized /><div className="explainer-wash" /><button aria-label="Erklärvideo abspielen"><Play fill="currentColor" /></button><span>60–90 Sek.<br />Erklärvideo-Konzept</span></div>
+          <div className="explainer-photo"><Image src="https://images.unsplash.com/photo-1764694875484-22d6a33ee374?auto=format&fit=crop&fm=jpg&q=82&w=1800" alt="Moderne Architektur in einer Berglandschaft" fill sizes="50vw" unoptimized /><div className="explainer-wash" /><button aria-label="Erklärvideo abspielen"><Play fill="currentColor" /></button><span>60–90 Sek.<br />Erklärvideo-Konzept</span></div>
           <div className="explainer-copy"><span className="eyebrow">Komplexes einfach machen</span><h2>Versicherung muss sich nicht kompliziert anfühlen.</h2><p>Der Funnel und das Erklärvideo erzählen dieselbe Geschichte: erst Situation verstehen, dann Themen sortieren, danach persönlich entscheiden.</p><div className="mini-storyboard"><span><b>01</b> Alltag & Problem</span><span><b>02</b> Ordnung schaffen</span><span><b>03</b> Möglichkeiten verstehen</span><span><b>04</b> Nächster Schritt</span></div><button className="primary" onClick={() => openFunnel()}>Funnel selbst erleben <ArrowRight /></button></div>
         </Reveal>
       </section>
 
       <section className="final-cta">
-        <div className="final-bg"><Image src="/assets/inheritance.svg" alt="Majestätischer Baum bei Sonnenaufgang" fill sizes="100vw" unoptimized /></div><div className="final-wash" />
+        <div className="final-bg"><Image src="https://images.unsplash.com/photo-1773505121839-0d12dd196324?auto=format&fit=crop&fm=jpg&q=82&w=1800" alt="Majestätischer Baum bei Sonnenaufgang" fill sizes="100vw" unoptimized /></div><div className="final-wash" />
         <Reveal className="final-content"><span className="eyebrow light">Dein nächster Schritt</span><h2>Ein besser abgesichertes Leben beginnt mit den richtigen Fragen.</h2><p>In wenigen Minuten entsteht aus vier komplexen Themen eine klare persönliche Übersicht.</p><div><button className="primary" onClick={() => openFunnel()}>Meine Situation prüfen <ArrowRight /></button><span><LockKeyhole /> Konzeptdemo · keine Datenübertragung</span></div></Reveal>
       </section>
 
